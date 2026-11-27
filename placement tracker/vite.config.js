@@ -8,4 +8,18 @@ export default defineConfig({
     react(),
     babel({ presets: [reactCompilerPreset()] })
   ],
+  server: {
+    port: 5173,
+    proxy: {
+      '/api': {
+        // Target Express server on port 5001 to avoid macOS AirPlay / AirTunes (port 5000)
+        target: 'http://127.0.0.1:5001',
+        changeOrigin: true,
+      },
+      '/uploads': {
+        target: 'http://127.0.0.1:5001',
+        changeOrigin: true,
+      }
+    }
+  }
 })

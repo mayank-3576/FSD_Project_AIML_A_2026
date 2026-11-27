@@ -1,0 +1,15 @@
+{
+  "name": "placement-tracker-abes-ec",
+  "version": "1.0.0",
+  "description": "Placement Tracker — Campus Recruitment Management System for ABES Engineering College (College Code: 032)",
+  "private": true,
+  "scripts": {
+    "start": "cd server && npm start",
+    "server": "cd server && npm start",
+    "client": "cd \"placement tracker\" && npm run dev",
+    "seed": "cd server && npm run seed",
+    "test": "cd server && npm test",
+    "build": "cd \"placement tracker\" && BROWSERSLIST=defaults npm run build",
+    "render-build": "cd server && npm install && cd \"../placement tracker\" && npm install && BROWSERSLIST=defaults npm run build"
+  }
+}
